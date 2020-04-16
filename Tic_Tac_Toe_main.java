@@ -14,6 +14,7 @@ public class Tic_Tac_Toe_main {
 			if( i < 2 )
 				System.out.println("--------------------------------");
 		}
+		check_Move();
 	}
 	
 	public static void move(char c) {
@@ -23,14 +24,20 @@ public class Tic_Tac_Toe_main {
 		int row = sc.nextInt();
 		int column = sc.nextInt();
 		
-		matrix[row][column] = c;
+		if( matrix[row][column] == 'X' || matrix[row][column] == 'O' ) {
+			System.out.println("Are you illiterate?????? Giving you another try");
+			move(c);
+		}
+		else
+			matrix[row][column] = c;
 		
 		display();
 	}
 	
-	void check_Move() {
+	public static void check_Move() {
 		for(int i = 0; i < 3; i++ ) {
 			for(int j = 0; j < 3; j++ ) {
+				
 			}
 		}
 	}
